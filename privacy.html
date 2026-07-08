@@ -1,103 +1,413 @@
 <!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy | ROAD MASTER CARS</title>
-    <meta name="description" content="Privacy page de ROAD MASTER CARS." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="privacy-page">
-    <div class="progress" aria-hidden="true"></div>
-    <header class="site-header solid" data-animate>
-      <a class="brand" href="index.html" aria-label="ROAD MASTER CARS accueil">
-        <span class="brand-mark">RM</span>
-        <span>
-          <strong>ROAD MASTER CARS</strong>
-          <small>Sale, Maroc</small>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="index.html#fleet">Vehicules</a>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#company">Societe</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <a class="header-cta" href="index.html#booking">Reserver</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the ROAD MASTER CARS Android app. Offline catalog with no tracking, no ads, and no personal data collection.">
+  <title>ROAD MASTER CARS Privacy Policy</title>
+
+  <style>
+    :root {
+      --primary: #0b2341;
+      --primary-soft: #123c69;
+      --green: #2f9e44;
+      --gold: #f4b942;
+      --bg: #f3f6fa;
+      --card: #ffffff;
+      --text: #17212b;
+      --muted: #64748b;
+      --line: #dbe4ee;
+      --shadow: 0 18px 45px rgba(11, 35, 65, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(244, 185, 66, 0.22), transparent 32%),
+        linear-gradient(135deg, #eef4fb 0%, #f8fafc 45%, #edf7f0 100%);
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 36px 18px 70px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(11, 35, 65, 0.96), rgba(18, 60, 105, 0.94)),
+        radial-gradient(circle at top right, rgba(244, 185, 66, 0.32), transparent 35%);
+      border-radius: 30px;
+      padding: 42px 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(244, 185, 66, 0.16);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .badge span {
+      width: 9px;
+      height: 9px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(47, 158, 68, 0.2);
+    }
+
+    h1 {
+      position: relative;
+      margin: 18px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      max-width: 780px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      position: relative;
+      max-width: 720px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.05rem;
+    }
+
+    .date {
+      margin-top: 18px !important;
+      font-weight: 700;
+      color: #fff !important;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0;
+    }
+
+    .trust-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(219, 228, 238, 0.9);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(11, 35, 65, 0.07);
+    }
+
+    .trust-card strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+      font-size: 1.02rem;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 12px 34px rgba(11, 35, 65, 0.06);
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    h2::before {
+      content: "";
+      width: 10px;
+      height: 28px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, var(--gold), var(--green));
+      flex: 0 0 auto;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--primary-soft);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    li {
+      position: relative;
+      padding: 12px 14px 12px 42px;
+      background: #f8fafc;
+      border: 1px solid #e7edf4;
+      border-radius: 14px;
+    }
+
+    li::before {
+      content: "✓";
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(47, 158, 68, 0.14);
+      color: var(--green);
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+
+    .company {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .info {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1px solid #e7edf4;
+    }
+
+    .info small {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.72rem;
+    }
+
+    .info span {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .info.full {
+      grid-column: 1 / -1;
+    }
+
+    footer {
+      margin-top: 24px;
+      padding: 20px 24px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 20px 12px 42px;
+      }
+
+      .hero {
+        padding: 30px 22px;
+        border-radius: 24px;
+      }
+
+      .grid,
+      .company {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 22px 18px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        padding: 0;
+      }
+
+      .hero,
+      section,
+      footer {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="badge"><span></span> No Data Collection</div>
+      <h1>ROAD MASTER CARS Privacy Policy</h1>
+      <p>This policy applies to the ROAD MASTER CARS Android app, an offline vehicle rental catalog and local cost estimator.</p>
+      <p class="date">Effective date: 2026-07-07</p>
     </header>
 
-    <main class="privacy-main">
-      <section class="privacy-hero reveal">
-        <p class="eyebrow">Privacy page</p>
-        <h1>Protection des donnees</h1>
-        <p>
-          Cette page explique comment ROAD MASTER CARS traite les informations
-          transmises lors d'une demande de location ou d'un contact commercial.
-        </p>
+    <div class="grid">
+      <div class="trust-card">
+        <strong>Offline App</strong>
+        <span>Catalog data is stored locally inside the app.</span>
+      </div>
+      <div class="trust-card">
+        <strong>No Tracking</strong>
+        <span>No analytics, ads, tracking SDKs, or login systems.</span>
+      </div>
+      <div class="trust-card">
+        <strong>No Permissions</strong>
+        <span>The app does not request device permissions.</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <section>
+        <h2>Summary</h2>
+        <ul>
+          <li>The app is an offline vehicle rental catalog and local cost estimator.</li>
+          <li>The app does not collect, store, sell, or share personal data.</li>
+          <li>There are no ads, analytics, tracking SDKs, or login systems.</li>
+          <li>The app does not request device permissions.</li>
+          <li>The app does not use Android backup for app data.</li>
+          <li>All catalog data is stored locally inside the app.</li>
+        </ul>
       </section>
 
-      <section class="privacy-content">
-        <article class="policy-block reveal">
-          <h2>1. Responsable</h2>
-          <p>
-            ROAD MASTER CARS, Societe a Responsabilite Limitee a Associe Unique,
-            immatriculee RC 26423 au Tribunal de Sale, ICE 001879231000008,
-            capital 100 000 DHS.
-          </p>
-        </article>
-        <article class="policy-block reveal">
-          <h2>2. Donnees collectees</h2>
-          <p>
-            Les informations peuvent inclure nom, telephone, email, dates de location,
-            categorie de vehicule souhaitee, pieces necessaires au contrat et messages
-            transmis volontairement.
-          </p>
-        </article>
-        <article class="policy-block reveal">
-          <h2>3. Utilisation</h2>
-          <p>
-            Les donnees servent a repondre aux demandes, preparer une reservation,
-            etablir un contrat de location sans chauffeur et assurer le suivi client.
-          </p>
-        </article>
-        <article class="policy-block reveal">
-          <h2>4. Conservation</h2>
-          <p>
-            Les donnees sont conservees pendant la duree necessaire a la gestion de la
-            relation commerciale, aux obligations legales et a la securite des locations.
-          </p>
-        </article>
-        <article class="policy-block reveal">
-          <h2>5. Partage</h2>
-          <p>
-            ROAD MASTER CARS ne vend pas les donnees personnelles. Elles peuvent etre
-            partagees uniquement avec des prestataires ou autorites lorsque cela est
-            necessaire a l'execution du service ou impose par la loi.
-          </p>
-        </article>
-        <article class="policy-block reveal">
-          <h2>6. Droits</h2>
-          <p>
-            Vous pouvez demander l'acces, la rectification ou la suppression de vos
-            donnees selon les conditions legales applicables. Les demandes peuvent etre
-            adressees au siege: 24 Rue Koufa Avenue Sakia El Hamra, 1 Er Etg Bettana,
-            Sale, MA.
-          </p>
-        </article>
+      <section>
+        <h2>Data We Collect</h2>
+        <p><strong>None.</strong> ROAD MASTER CARS does not collect personal data through this app.</p>
       </section>
-    </main>
 
-    <footer class="footer">
-      <span>ROAD MASTER CARS - DUNS 536033840</span>
-      <a href="index.html">Retour accueil</a>
+      <section>
+        <h2>Local App Data</h2>
+        <p>Vehicle listings, company information, FAQ text, legal text, and indicative prices are bundled with the app and displayed locally on your device.</p>
+        <p>The app does not create user accounts or send app data to ROAD MASTER CARS or any third party.</p>
+      </section>
+
+      <section>
+        <h2>Actions You Choose</h2>
+        <p>If you tap Share, Android opens another app on your device. Any information you choose to send outside this app is handled by that external app or service.</p>
+      </section>
+
+      <section>
+        <h2>Third-Party Services</h2>
+        <p>Sharing apps are separate services. Their own privacy policies apply to any data you send through them.</p>
+      </section>
+
+      <section>
+        <h2>Company Contact</h2>
+
+        <div class="company">
+          <div class="info">
+            <small>Company name</small>
+            <span>ROAD MASTER CARS</span>
+          </div>
+
+          <div class="info">
+            <small>Developer name</small>
+            <span>ROAD MASTER CARS</span>
+          </div>
+
+          <div class="info">
+            <small>Activity</small>
+            <span>Vehicle rental without driver</span>
+          </div>
+
+          <div class="info">
+            <small>DUNS</small>
+            <span>536033840</span>
+          </div>
+
+          <div class="info">
+            <small>RC</small>
+            <span>26423 — Tribunal de Sale</span>
+          </div>
+
+          <div class="info">
+            <small>ICE</small>
+            <span>001879231000008</span>
+          </div>
+
+          <div class="info">
+            <small>Legal form</small>
+            <span>Société à Responsabilité Limitée à Associé Unique</span>
+          </div>
+
+          <div class="info">
+            <small>Capital</small>
+            <span>100 000 DHS</span>
+          </div>
+
+          <div class="info full">
+            <small>Address</small>
+            <span>24 Rue Koufa, Avenue Sakia El Hamra, 1st Floor, Bettana, Sale, Morocco</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      ROAD MASTER CARS — Offline Android catalog. No data collection, ads, analytics, tracking, login, or dangerous permissions.
     </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </main>
+</body>
 </html>
